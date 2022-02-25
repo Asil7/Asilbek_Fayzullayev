@@ -1,0 +1,49 @@
+HTTP va HTTPS
+HTTP - Hypertext Transfer Protocol. HTTP tarmoq oraqli malumotlarni uzatish uv=chun ishlatiladigan protocol.
+Internet orqali yuboralidigan kop malumotlar jumladan veb-sayt tarkibi va API lar HTTP protocolidan foydalaniladi.
+HTTP protocoli request va response prinspga asoslangan. Yani sorov yuborish va javob qaytarish.
+
+HTTPS - bu yerda S harfi "Secure" yani xavfsiz degan manoni bildiradi. HTTPS da sorovlar va javoblar shifrlab jonatiladi.
+HTTPS dan foydalanilganda malumotlar xavfsiz almashadi yani sorov jonatayotgan userni sorovini tashqaridagi boshqa bir user kora olmaydi
+HTTPS request yoki responselarni shirlash uchun TLS/SSL  foydalanadi.
+TLS ochiq key shifrlash turidan foydalanadi. TLS 2 ta keydan iborat: public key va private key. Public key SSL sertikat orqali user Desktopida mavjud boladi.
+User server bilan aloqa ornatganda public va private keylar ozaro aloqa oraqali Session keylarni kelishib olishadi. Keyin barcha HTTP sorovlari Session keylari orqali shifrlanadi.
+
+
+Dependence Injection- bu Object yaratishda boshqa bir Objectdan foydalanishga aytiladi masalan:
+User objectini yaratamiz bunda userni ismi, familiyasi , telfon nomeri va addresi bolsin.
+Endi Address degan boshqa bir objectimiz ham bolsin, userimiz address objectidan foydalansin.
+yani user objectimizni ratamoqchi bolsak lekin address objectimiz bolmasa bunday user object yarata olmaymiz u jarayaon user objecti address objectiga qaram hisoblaniladi.
+Bundan kelib chiqadiki bir objectni boshqa bir objectga qaram bolishi Dependene Injection deyiladi.
+
+dependence Injectionni 3 turi mavjud:
+1)constructor injection:
+2)setter injection:
+3)interface injection:
+
+
+Servlet texnologiyasi veb-ilovani yaratish uchun ishlatiladi.
+Servlet - bu veb-ilova yaratish uchun ishlatiladigan texnologiya, ko'plab interfeyslar va sinflarni, shu jumladan hujjatlarni taqdim etadigan API,
+har qanday Servlet yaratish uchun amalga oshirilishi kerak bo'lgan interfeys,
+serverlarning imkoniyatlarini kengaytiruvchi va kiruvchi so'rovlarga javob beruvchi sinf. U har qanday so'rovlarga javob berishi mumkin.
+Servlet dinamik veb-sahifani yaratish uchun serverda o'rnatiladigan veb-komponentdir.
+Servlet API-da Servlet, GenericServlet, HttpServlet, ServletRequest, ServletResponse kabi ko'plab interfeyslari va sinflari mavjud.
+
+
+@Bean- XML fileda Bean klasslarini programma ishlayotgan holatda bir marotaba Containerga olib qoyadi va programmadan qancha foydalanuvchi
+osha klasslarda foydalanmoqchi bolganda Containerdan nusxasini olib beradi va xotiradan boshqa tadn klass uchun joy ajratmaydi
+Bean klaslarini singletone va protatype qilib ishlatsa boladi yani
+singletone faqat nusxa olib beradi.
+protatype da es yana boshqattan yaratib beradi bean klassini bu jarayon userni authentication jaroyinda ishlatish maqsadga muvofiq boladi
+
+
+Cookie-fayllar foydalanuvchi ma'lumotlarini o'z ichiga olgan mijoz tomonidagi fayllar,
+Seanslar esa foydalanuvchi ma'lumotlarini o'z ichiga olgan server tomonidagi fayllar.
+
+Cookie seansga bog'liq emas, lekin Session Cookie-ga bog'liq.
+
+Cookie siz o'rnatgan xizmat muddatiga qarab tugaydi, seans esa foydalanuvchi o'z brauzerini yopganda tugaydi.
+
+Maksimal cookie hajmi 4KB ni tashkil qiladi, seansda esa siz xohlagancha maʼlumotlarni saqlashingiz mumkin.
+
+Cookie faylida unsetcookie() funksiyasi yoʻq, seansda esa Session_destroy(); barcha ro'yxatga olingan ma'lumotlarni yo'q qilish yoki ba'zilarini o'chirish uchun ishlatiladi
